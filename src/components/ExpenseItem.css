@@ -1,7 +1,7 @@
 :root {
   --main-bg-color: #b6b8d6;
-  --font-color: #31081f;
-  --price-bg-color: #e56b6f;
+  --font-color: #2a2d34;
+  --price-bg-color: #94ecbe;
 }
 
 .expense-item {
@@ -11,7 +11,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   padding: 0.5rem;
   margin: 1rem 0;
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: var(--main-bg-color);
 }
 
@@ -44,7 +44,7 @@
   background-color: var(--price-bg-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   padding: 0.5rem;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 @media (min-width: 580px) {
