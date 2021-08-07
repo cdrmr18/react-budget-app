@@ -1,12 +1,12 @@
 import "./ExpenseItem.css";
 
-const ExpenseItem = () => {
+const ExpenseItem = (props) => {
     return (
         <div className="expense-item">
-            <div className="expense-item-date">Aug 8, 2021</div>
+            <div className="expense-item-date">{props.date.toISOString()}</div>
             <div className="expense-item-description">
-                <h2>Rent</h2>
-                <div className="expense-item-price">$250</div>
+                <h2>{props.title}}</h2>
+                <div className="expense-item-price">{props.amount}</div>
             </div>
         </div>
     );

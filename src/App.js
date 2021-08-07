@@ -25,7 +25,13 @@ const App = () => {
   return (
       <div>
           <h2 className="Header">Budget Planner</h2>
-          <ExpenseItem></ExpenseItem>
+          {expenses.map( (expense) => (
+              <ExpenseItem 
+              title={expense.title} 
+              amount={expense.amount} 
+              date={expense.date}>
+              </ExpenseItem>
+          ))}
       </div>
   )
 }
