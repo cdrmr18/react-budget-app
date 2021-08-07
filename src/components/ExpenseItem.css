@@ -1,17 +1,15 @@
 :root {
   --main-bg-color: #b6b8d6;
   --font-color: #2a2d34;
-  --price-bg-color: #94ecbe;
+  --price-bg-color: #a0f7c7;
 }
 
 .expense-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   padding: 0.5rem;
   margin: 1rem 0;
-  border-radius: 8px;
   background-color: var(--main-bg-color);
 }
 
@@ -33,7 +31,7 @@
   color: #3a3a3a;
   font-size: 1rem;
   flex: 1;
-  margin: 0 1rem;
+  margin-left: 32px;
   color: var(--font-color);
 }
 
@@ -42,9 +40,7 @@
   font-weight: bold;
   color: var(--font-color);
   background-color: var(--price-bg-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   padding: 0.5rem;
-  border-radius: 8px;
 }
 
 @media (min-width: 580px) {
