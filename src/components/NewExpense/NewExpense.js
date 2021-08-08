@@ -3,7 +3,7 @@ import NewExpenseForm from "./NewExpenseForm";
 
 const NewExpense = () => {
     return (
-        <div>
+        <div className="new-expense">
             <NewExpenseForm />
         </div>
     )
