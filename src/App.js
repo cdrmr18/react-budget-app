@@ -1,5 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import ExpenseFilter from "./components/ExpensesFilter/ExpenseFilter";
 
 const App = () => {
     const expenses = [{
@@ -26,10 +27,15 @@ const App = () => {
     const addEnteredExpenseHandler = expense => {
         
     };
+    // function to transfer to expense filter and grab the new year to update expenses
+    const addNewSelectedYearHandler = year => {
+        console.log(year)
+    }
 
     return (
         <div>
             <NewExpense onNewExpense={addEnteredExpenseHandler} />
+            <ExpenseFilter onNewSelectedYear={addNewSelectedYearHandler} />
             <Expenses expenses={expenses}  />
         </div>
     )
