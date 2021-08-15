@@ -23,12 +23,16 @@ const App = () => {
         },
     ];
 
-  return (
-      <div>
-          <NewExpense />
-          <Expenses expenses={expenses} />
-      </div>
-  )
+    const addEnteredExpenseHandler = expense => {
+        
+    };
+
+    return (
+        <div>
+            <NewExpense onNewExpense={addEnteredExpenseHandler} />
+            <Expenses expenses={expenses}  />
+        </div>
+    )
 }
 
 export default App;

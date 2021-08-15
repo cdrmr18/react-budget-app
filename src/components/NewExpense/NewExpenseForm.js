@@ -28,7 +28,7 @@ const NewExpenseForm = (props) => {
             amount: enteredAmount,
             date: new Date(enteredDate)
         };
-        // execute parent transferred function 
+        // execute parent transferred function newexpense.js
         props.onSaveExpenseData(expenseData);
               
         // reset input values
