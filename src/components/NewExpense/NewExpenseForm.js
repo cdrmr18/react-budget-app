@@ -1,38 +1,41 @@
 import "./NewExpenseForm.css";
 import React, { useState} from "react";
 
-const NewExpenseForm = () => {
+const NewExpenseForm = (props) => {
+    // handler functions to set expense object from form inputs
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
 
-    
+    // Grabbing data from title form input and setting variable
     const titleChangeHandler = (e) => {
         setEnteredTitle(e.target.value)
     }
-    
+    // Grabbing data from amount form input and setting variable
     const amountChangeHandler = (e) => {
         setEnteredAmount(e.target.value)
     }
-
+    // Grabbing data from date form input and setting variable
     const dateChangeHandler = (e) => {
         setEnteredDate(e.target.value)
     }
-
+    // Collecting form data and reseting form to blank
     const submitHandler = (e) => {
         e.preventDefault()
-
+        // create form data object
         const expenseData = {
             title: enteredTitle,
             amount: enteredAmount,
             date: new Date(enteredDate)
         };
-        console.log(expenseData)
-
+        // execute parent transferred function 
+        props.onSaveExpenseData(expenseData);
+              
+        // reset input values
         setEnteredTitle("")
         setEnteredAmount("")
         setEnteredDate("")
-    }
+    };
 
     return (
         <form onSubmit={submitHandler} >
