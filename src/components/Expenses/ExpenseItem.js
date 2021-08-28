@@ -13,7 +13,7 @@ const ExpenseItem = (props) => {
         <Card className="expense-item">
             <ExpenseCalendar date={props.date} />
             <div className="expense-item-description">
-                <h2>{title}</h2>
+                <h2>{props.title}</h2>
                 <Card className="expense-item-price">$ {props.amount}</Card>
             </div>
             <button onClick={changeTitle} >Change Title</button>
