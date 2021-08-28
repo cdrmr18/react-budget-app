@@ -25,8 +25,8 @@ const NewExpenseForm = (props) => {
         // create form data object
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
-            date: new Date(enteredDate)
+            amount: +enteredAmount,
+            date: new Date(enteredDate),
         };
         // execute parent transferred function newexpense.js
         props.onSaveExpenseData(expenseData);
